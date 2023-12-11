@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>this is home page</h1>
+{% for m in messages %}
+<h1 class="text-{{m.tags}}">{{m}}</h1>
+{% endfor %}
+{% endblock %}

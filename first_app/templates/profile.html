@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>this is profile page</h1>
+{% for m in messages %}
+<h1 class="text-{{m.tags}}">{{m}}</h1>
+{% endfor %}
+
+<a href="{% url 'pass_change_with_old' %}"><button class="btn btn-primary" type="submit">Change password with old</button></a>
+
+<a  href="{% url 'pass_change_without_old' %}"><button class="btn btn-danger" type="submit">Change password without old</button></a>
+{% endblock %}
